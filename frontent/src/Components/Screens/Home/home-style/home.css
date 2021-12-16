@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.banner-div {
+  text-align: center;
+}
+
+.home-banner {
+  width: 90%;
+  margin: 5px auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.829);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-img {
+  object-fit: cover;
+  width: 295px;
+  height: 295px;
+  border-radius: 5%;
+  margin: 0 25px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.548);
+  cursor: pointer;
+}
+
+.menu-container {
+  text-align: center;
+  padding: 0 5%;
+  margin-bottom: 20px;
+}
+
+.head h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+
+p {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.links {
+  text-decoration: none;
+}
+@media screen and (max-width: 540px) {
+  .menu-img {
+    width: 145px;
+    height: 145px;
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-banner {
+    width: 100%;
+  }
+  .menu-img {
+    width: 140px;
+    height: 140px;
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+  .menu-container {
+    padding: 0 10px;
+  }
+  p {
+    margin-top: 3px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .menu-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    margin-top: 15px;
+  }
+}

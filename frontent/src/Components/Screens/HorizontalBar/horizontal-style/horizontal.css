@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.story-container{
+    margin: 0 auto;
+}
+
+.story-container ul{
+    list-style: none;
+    user-select: none;
+    display: flex;
+    overflow-y: auto;
+    padding: 5px 0;
+}
+
+.story-container ul li{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-container ul li:first-child{
+    padding-left: 20px;
+}
+
+.story-container ul li:last-child{
+    padding-right: 20px;
+}
+
+.story-container ul li .story{
+    width: 80px;
+    height: 80px;
+    padding: 1px;
+    position: relative;
+}
+
+.story-container ul li.has-story .story{
+    padding: 2px;
+}
+
+.story-container ul li .story img{
+    padding: 4px;
+    border-radius: 15%;
+    width: 100%;
+    height: 100%;
+}
+
+.story-container ul li span{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: black;
+    font-weight: 400;
+    font-size: 15px;
+    max-width: 85px;
+    height: 20px;
+}
+
+.banner{
+    text-align: center;
+}
+
+.banner-img{
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 40rem;
+}
+
+@media screen and (max-width:480px){
+    .banner-img{
+        width: 100%;
+    }
+    .banner{
+        padding: 0 3px;
+    }
+    .story-container ul li span{
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .story-container ul{
+        justify-content: center;
+    }
+}

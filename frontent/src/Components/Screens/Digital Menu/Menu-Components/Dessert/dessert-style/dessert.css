@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.catagary-items {
+  text-align: center;
+}
+
+.single-catagory {
+  padding: 0;
+}
+
+.veg-img {
+  width: 13px;
+  height: 13px;
+  margin-top: 7px;
+  margin-right: 4px;
+}
+
+.dropdown {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  width: 35rem;
+  border-bottom: solid 1px rgb(190, 187, 187);
+}
+
+.dropdown-img {
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+}
+
+.dropdown-head {
+  letter-spacing: 0.5px;
+  font-size: 19px;
+  margin-top: 16px;
+  margin-right: auto;
+  margin-left: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+.sub-slider-outer {
+  margin: 0 auto;
+  width: 33rem;
+  margin-bottom: 10px;
+}
+
+.sub-slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-name {
+  width: auto;
+  margin-right: auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+
+.item-prize {
+  font-family: "Open Sans", sans-serif;
+  margin-right: 20px;
+  font-weight: 400;
+}
+
+.cart-icon {
+  margin-top: 2px;
+  color: gray;
+  transition: 0.3s;
+}
+
+.cart-icon:hover {
+  color: black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.item-tag {
+  padding: 4px 5px;
+}
+
+.tag-name {
+  color: white;
+  padding: 1px 3px;
+  border-radius: 5px;
+  width: 50%;
+  margin-right: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+  font-weight: 600;
+}
+
+.SPICY {
+  background-color: rgb(236, 56, 56);
+}
+
+.CHEFS_SPECIAL {
+  background-color: rgb(90, 10, 182);
+}
+
+.QUICK_SERVED {
+  background-color: rgb(39, 21, 201);
+}
+
+.MUST_TRY {
+  background-color: rgb(240, 24, 175);
+}
+
+.NONE {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    width: 100%;
+  }
+  .dropdown {
+    width: 100%;
+  }
+  .single-catagory {
+    padding: 0 10px;
+  }
+  .item-name {
+    width: 215px;
+  }
+  .sub-slider-outer {
+    width: auto;
+  }
+  .veg-img {
+    margin-top: 7px;
+  }
+}
