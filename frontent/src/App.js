@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import Navbar from "./Components/Navbar/main/Navbar";
 import Routing from "./Components/Navbar/routes/Routing";
 import { BrowserRouter } from 'react-router-dom';
 import { userContext } from "./Context/context";
@@ -13,7 +12,6 @@ const App = () => {
     return (
         <userContext.Provider value={{cart, cartDispatch, toggle, toggleDispatch, table, tableDispatch}}>
             <BrowserRouter>
-                <Navbar />
                 <Routing />
             </BrowserRouter>
         </userContext.Provider>

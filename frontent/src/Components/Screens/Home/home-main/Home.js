@@ -3,6 +3,7 @@ import HomeControler from '../home-controller/HomeControler';
 import { useParams } from 'react-router-dom';
 import { userContext } from '../../../../Context/context';
 import { TABLE } from '../../../../Actions/Actions';
+import Navbar from '../../../Navbar/main/Navbar';
 
 const Home = () => {
 
@@ -12,7 +13,10 @@ const Home = () => {
         tableDispatch({ type: TABLE, payload: ({ table: number }) });
     }, [number])
     return (
-        <HomeControler />
+        <>
+            <Navbar />
+            <HomeControler />
+        </>
     )
 }
 
