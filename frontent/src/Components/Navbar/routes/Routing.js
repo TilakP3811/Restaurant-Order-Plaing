@@ -14,12 +14,16 @@ const Routing = () => {
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/:number" element={<Home/>}/>
             <Route exact path="/:number/digital-menu/best-sellers" element={<BestSeller/>}/>
-            <Route path="/:number/digital-menu/best-sellers" element={<BestSeller/>}/>
             <Route path="/:number/digital-menu/food" element={<Food/>}/>
             <Route path="/:number/digital-menu/beverage" element={<Beverage/>}/>
             <Route path="/:number/digital-menu/dessert" element={<Dessert/>}/>
             <Route path="/:number/cart" element={<Cart/>}/>
             <Route path="/admin-login" element={<Signin/>}/>
+            <Route exact path="/admin" element={<Home/>}/>
+            <Route path="/admin/digital-menu/best-sellers" element={<BestSeller/>}/>
+            <Route path="/admin/digital-menu/food" element={<Food/>}/>
+            <Route path="/admin/digital-menu/beverage" element={<Beverage/>}/>
+            <Route path="/admin/digital-menu/dessert" element={<Dessert/>}/>
         </Routes>
     )
 }

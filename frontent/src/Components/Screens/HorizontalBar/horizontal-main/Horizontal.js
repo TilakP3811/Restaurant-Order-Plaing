@@ -10,12 +10,13 @@ import { userContext } from '../../../../Context/context';
 
 const Horizontal = () => {
     const {table} = useContext(userContext);
+    const isAdmin = localStorage.getItem("token");
     return (
         <>
             <div className="horizontal-slider">
                 <div className="story-container">
                     <ul>
-                        <Link style={{ textDecoration: "none" }} to={"/"+table.table+"/digital-menu/best-sellers"}>
+                        <Link style={{ textDecoration: "none" }} to={ isAdmin ? "/admin/digital-menu/best-sellers" : "/"+table.table+"/digital-menu/best-sellers"}>
                             <li className="has-story">
                                 <div className="story">
                                     <img src={img1} alt="" />
@@ -24,7 +25,7 @@ const Horizontal = () => {
                             </li>
                         </Link>
 
-                        <Link style={{ textDecoration: "none" }} to={"/"+table.table+"/digital-menu/food"}>
+                        <Link style={{ textDecoration: "none" }} to={ isAdmin ? "/admin/digital-menu/food" : "/"+table.table+"/digital-menu/food"}>
                             <li className="has-story">
                                 <div className="story">
                                     <img src={img2} alt="" />
@@ -33,7 +34,7 @@ const Horizontal = () => {
                             </li>
                         </Link>
 
-                    <Link style={{ textDecoration: "none" }} to={"/"+table.table+"/digital-menu/beverage"}>
+                    <Link style={{ textDecoration: "none" }} to={ isAdmin ? "/admin/digital-menu/beverage" : "/"+table.table+"/digital-menu/beverage"}>
                             <li className="has-story">
                                 <div className="story">
                                     <img src={img3} alt="" />
@@ -42,7 +43,7 @@ const Horizontal = () => {
                             </li>
                         </Link>
 
-                        <Link style={{ textDecoration: "none" }} to={"/"+table.table+"/digital-menu/dessert"}>
+                        <Link style={{ textDecoration: "none" }} to={ isAdmin ? "/admin/digital-menu/dessert" : "/"+table.table+"/digital-menu/dessert"}>
                             <li className="has-story">
                                 <div className="story">
                                     <img src={img4} alt="" />

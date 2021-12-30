@@ -7,7 +7,7 @@ const port = 5000;
 app.use(express.json());
 app.use(express.urlencoded());
 
-dotenv.config({ path: ".config.env"});
+dotenv.config({ path: "./config.env"});
 require("./Connection/connection");
 
 app.use(require("./Admin/routes/auth"));
