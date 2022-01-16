@@ -10,7 +10,6 @@ const Navbar = () => {
     const { cart, table } = useContext(userContext);
     const navigate = useNavigate();
     const isAdmin = localStorage.getItem("token");
-    console.log(isAdmin);
     useEffect(() => {
     }, [cart])
 
@@ -18,6 +17,29 @@ const Navbar = () => {
         localStorage.clear();
         navigate("/");
     }
+
+    const readLinks = () => {
+        if(isAdmin){
+            return [
+                <li className="nav-items"><Link to={ "/admin" } className="nav-link-head">Home</Link></li>,
+                <li className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-head">Digital Menu</Link></li>,
+                <li className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-sub">Best Sellers</Link></li>,
+                <li className="nav-items"><Link to={ "/admin/digital-menu/food" } className="nav-link-sub">Food</Link></li>,
+                <li className="nav-items"><Link to={ "/admin/digital-menu/beverage" } className="nav-link-sub">Beverage</Link></li>,
+                <li className="nav-items"><Link to={ "/admin/digital-menu/dessert" } className="nav-link-sub">Dessert</Link></li>,
+            ]
+        }
+        else{
+            return [
+                <li className="nav-items"><Link to={ "/"+table.table} className="nav-link-head">Home</Link></li>,
+                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-head">Digital Menu</Link></li>,
+                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-sub">Best Sellers</Link></li>,
+                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/food"} className="nav-link-sub">Food</Link></li>,
+                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/beverage"} className="nav-link-sub">Beverage</Link></li>,
+                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/dessert"} className="nav-link-sub">Dessert</Link></li>,
+            ]
+        }
+    };
 
     return (
         <>
@@ -44,12 +66,7 @@ const Navbar = () => {
                 </div>
                 <div >
                     <ul>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin" : "/"+table.table} className="nav-link-head">Home</Link></li>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin/digital-menu/best-sellers" : "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-head">Digital Menu</Link></li>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin/digital-menu/best-sellers" : "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-sub">Best Sellers</Link></li>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin/digital-menu/food" : "/"+table.table+"/digital-menu/food"} className="nav-link-sub">Food</Link></li>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin/digital-menu/beverage" : "/"+table.table+"/digital-menu/beverage"} className="nav-link-sub">Beverage</Link></li>
-                        <li className="nav-items"><Link to={ isAdmin ? "/admin/digital-menu/dessert" : "/"+table.table+"/digital-menu/dessert"} className="nav-link-sub">Dessert</Link></li>
+                        {readLinks()}
                     </ul>
                 </div>
             </div>
