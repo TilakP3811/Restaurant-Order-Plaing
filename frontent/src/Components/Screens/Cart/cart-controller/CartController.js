@@ -43,7 +43,7 @@ const CartController = () => {
             if (data.message) {
                 alert(data.message);
             }
-
+            
         } catch (err) {
             console.log(err);
         }
@@ -51,6 +51,7 @@ const CartController = () => {
 
     const cancelOrder = () => {
         cartDispatch({ type: CANCEL });
+        toggleDispatch({type: CANCEL});
         navigate("/");
     }
 

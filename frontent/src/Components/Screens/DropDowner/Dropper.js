@@ -23,7 +23,7 @@ const Dropper = ({ id, name, prize, tag }) => {
                 <p className="item-name">{name}</p>
                 <span className="item-prize">₹ {prize}</span>
                 {
-                    isAdmin ? <i class="cart-icon far fa-edit"></i> : toggle.includes(id) ? <i onClick={() => { removeToCart(id, name, prize, 1) }} className="cart-icon fas fa-minus-circle"></i> : <i onClick={() => { addToCart(id, name, prize, 1) }} className="cart-icon fas fa-cart-plus"></i>
+                    isAdmin ? <i className="cart-icon far fa-edit"></i> : toggle.includes(id) ? <i onClick={() => { removeToCart(id, name, prize, 1) }} className="cart-icon fas fa-minus-circle"></i> : <i onClick={() => { addToCart(id, name, prize, 1) }} className="cart-icon fas fa-cart-plus"></i>
                 }
             </div>
             <div className="item-tag">

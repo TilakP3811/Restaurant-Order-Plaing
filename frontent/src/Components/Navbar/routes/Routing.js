@@ -7,6 +7,7 @@ import Dessert from "../../Screens/Digital Menu/Menu-Components/Dessert/dessert-
 import BestSeller from "../../Screens/Digital Menu/Menu-Components/Best-Seller/bestseller-main/BestSeller";
 import Cart from "../../Screens/Cart/cart-main/Cart";
 import Signin from "../../Admin/Signin/signin-main/Signin";
+import OrdersMain from "../../Admin/Orders/orders-main/OrdersMain";
 
 const Routing = () => {
     return(
@@ -24,6 +25,7 @@ const Routing = () => {
             <Route path="/admin/digital-menu/food" element={<Food/>}/>
             <Route path="/admin/digital-menu/beverage" element={<Beverage/>}/>
             <Route path="/admin/digital-menu/dessert" element={<Dessert/>}/>
+            <Route path="/admin/orders" element={<OrdersMain/>}/>
         </Routes>
     )
 }
