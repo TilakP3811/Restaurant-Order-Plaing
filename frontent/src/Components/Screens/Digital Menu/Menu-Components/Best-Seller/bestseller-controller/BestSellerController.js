@@ -17,6 +17,7 @@ const BestSellerController = () => {
                 setDishes(data.dishes);
                 setLoading(true);
             }
+            console.log(dishes);
         } catch (err) {
             console.log(err);
         }

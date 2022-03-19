@@ -43,7 +43,7 @@ const CartController = () => {
             if (data.message) {
                 alert(data.message);
             }
-
+            
         } catch (err) {
             console.log(err);
         }
@@ -51,6 +51,7 @@ const CartController = () => {
 
     const cancelOrder = () => {
         cartDispatch({ type: CANCEL });
+        toggleDispatch({type: CANCEL});
         navigate("/");
     }
 
@@ -61,7 +62,7 @@ const CartController = () => {
                     <div className="items">
                         <p className="name h">Name</p>
                         <p className="quantity-name h">Quantity</p>
-                        <p className="price h">Price/plt</p>
+                        <p className="prize h">Price/plt</p>
                         <p className="total total-n h">Total</p>
                     </div>
                 </div>
@@ -76,7 +77,7 @@ const CartController = () => {
                                     }
                                     <p className="quantity">{item.quantity}</p>
                                     <i onClick={() => { increment(item.id) }} className="increment fas fa-plus"></i>
-                                    <p className="price">{item.prize}/-</p>
+                                    <p className="prize">{item.prize}/-</p>
                                     <p className="total">₹{item.quantity * item.prize}</p>
                                     <i onClick={() => removeToCart(item.id, item.name, item.prize, 1)} className="cross far fa-times-circle"></i>
                                 </div>
@@ -93,7 +94,7 @@ const CartController = () => {
                     }
                     <div className="items">
                         <p className="name h total-h">Grand Total : </p>
-                        <p className="total total-n h">₹{grandTotal}</p>
+                        <p className="totall total-n h">₹{grandTotal}</p>
                     </div>
                 </div>
                 <div className="btns">

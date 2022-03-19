@@ -36,6 +36,9 @@ export const cartToggle = (state, action) => {
     else if (action.type === REMOVE_TO_CART) {
         return state.filter(item => item !== action.payload.id);
     }
+    else if(action.type === CANCEL){
+        return [];
+    }
     return state;
 }
 

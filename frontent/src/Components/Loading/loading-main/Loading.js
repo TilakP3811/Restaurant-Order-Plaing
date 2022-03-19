@@ -4,8 +4,8 @@ import loadingScreen from "../loading-public/reload.png";
 
 const Loading = () => {
     return (
-        <div class="loading">
-            <img class="loading-img" src={loadingScreen} alt=""/>
+        <div className="loading">
+            <img className="loading-img" src={loadingScreen} alt=""/>
         </div>
     )
 }

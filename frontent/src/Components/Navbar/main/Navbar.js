@@ -21,22 +21,24 @@ const Navbar = () => {
     const readLinks = () => {
         if(isAdmin){
             return [
-                <li className="nav-items"><Link to={ "/admin" } className="nav-link-head">Home</Link></li>,
-                <li className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-head">Digital Menu</Link></li>,
-                <li className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-sub">Best Sellers</Link></li>,
-                <li className="nav-items"><Link to={ "/admin/digital-menu/food" } className="nav-link-sub">Food</Link></li>,
-                <li className="nav-items"><Link to={ "/admin/digital-menu/beverage" } className="nav-link-sub">Beverage</Link></li>,
-                <li className="nav-items"><Link to={ "/admin/digital-menu/dessert" } className="nav-link-sub">Dessert</Link></li>,
+                <li key={1} className="nav-items"><Link to={ "/admin" } className="nav-link-head">Home</Link></li>,
+                <li key={2} className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-head">Digital Menu</Link></li>,
+                <li key={3} className="nav-items"><Link to={ "/admin/digital-menu/best-sellers" } className="nav-link-sub">Best Sellers</Link></li>,
+                <li key={4} className="nav-items"><Link to={ "/admin/digital-menu/food" } className="nav-link-sub">Food</Link></li>,
+                <li key={5} className="nav-items"><Link to={ "/admin/digital-menu/dessert" } className="nav-link-sub">Dessert</Link></li>,
+                <li key={6} className="nav-items"><Link to={ "/admin/digital-menu/beverage" } className="nav-link-sub">Beverage</Link></li>,
+                <li key={7} className="nav-items"><Link to={ "/admin/orders" } className="nav-link-head">Orders</Link></li>,
+                <li key={8} className="nav-items"><Link to={ "/admin/orders-history" } className="nav-link-head">Orders History</Link></li>
             ]
         }
         else{
             return [
-                <li className="nav-items"><Link to={ "/"+table.table} className="nav-link-head">Home</Link></li>,
-                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-head">Digital Menu</Link></li>,
-                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-sub">Best Sellers</Link></li>,
-                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/food"} className="nav-link-sub">Food</Link></li>,
-                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/beverage"} className="nav-link-sub">Beverage</Link></li>,
-                <li className="nav-items"><Link to={ "/"+table.table+"/digital-menu/dessert"} className="nav-link-sub">Dessert</Link></li>,
+                <li key={1} className="nav-items"><Link to={ "/"+table.table} className="nav-link-head">Home</Link></li>,
+                <li key={2} className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-head">Digital Menu</Link></li>,
+                <li key={3} className="nav-items"><Link to={ "/"+table.table+"/digital-menu/best-sellers"} className="nav-link-sub">Best Sellers</Link></li>,
+                <li key={4} className="nav-items"><Link to={ "/"+table.table+"/digital-menu/food"} className="nav-link-sub">Food</Link></li>,
+                <li key={5} className="nav-items"><Link to={ "/"+table.table+"/digital-menu/beverage"} className="nav-link-sub">Beverage</Link></li>,
+                <li key={6} className="nav-items"><Link to={ "/"+table.table+"/digital-menu/dessert"} className="nav-link-sub">Dessert</Link></li>,
             ]
         }
     };
@@ -51,7 +53,7 @@ const Navbar = () => {
                 <div className="search-cart">
                     <i className="icons fas fa-search "></i>
                     {
-                        isAdmin ? <i onClick={logOut} class="icons fas fa-sign-out-alt"></i> : <Link className='link' to={"/"+table.table+"/cart"}><i className="icons fas fa-cart-arrow-down"></i></Link>
+                        isAdmin ? <i onClick={logOut} className="icons fas fa-sign-out-alt"></i> : <Link className='link' to={"/"+table.table+"/cart"}><i className="icons fas fa-cart-arrow-down"></i></Link>
                     }
                     {
                         isAdmin ? "" : <h6 className='num-of-items'>{cart.length}</h6>
