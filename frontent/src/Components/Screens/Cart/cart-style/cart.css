@@ -97,22 +97,20 @@
   transition: 0.3s;
 }
 
-.price {
+.prize {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   width: 40px;
   margin-right: 30px;
 }
 
-.total {
+.totall {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  width: 40px;
   margin-right: 10px;
 }
 
 .total-n {
-  margin-right: 26px;
   margin-left: 15px;
 }
 

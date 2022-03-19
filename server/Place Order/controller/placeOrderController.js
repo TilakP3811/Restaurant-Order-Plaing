@@ -48,4 +48,13 @@ const placeOrder = async (req, res) => {
     }
 }
 
-module.exports = { placeOrder, getOrderList }
+const deleteOrder = async (req, res) => {
+    try {
+        const {id} = req.body;
+        const res = await PlaceOrder.findByIdAndRemove(id);
+    } catch (err) {
+        console.log(err);
+    }
+}
+
+module.exports = { placeOrder, getOrderList, deleteOrder }

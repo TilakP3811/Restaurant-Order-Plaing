@@ -1,7 +1,7 @@
 import React from 'react';
-import "../orders-style/orders.css";
 import Navbar from '../../../Navbar/main/Navbar';
 import OrdersController from '../orders-controller/OrdersController';
+import "../orders-style/orders-style.css";
 
 const OrdersMain = () => {
     return (
