@@ -5,8 +5,7 @@ const {secret} = require("../../Config/key");
 
 const signin = async (req, res) => {
     try {
-        const userName = req.body.userName;
-        const password = req.body.password;
+        const { userName, password } = req.body;
         if (!userName || !password) {
             return res.status(422).json({ err: true, message: "Fill All Field" });
         }

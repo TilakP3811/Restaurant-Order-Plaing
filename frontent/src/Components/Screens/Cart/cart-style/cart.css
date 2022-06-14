@@ -10,6 +10,13 @@
   background-color: white;
 }
 
+.cart-orderSomthing{
+  margin-top: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: #d15662;
+}
+
 .carts {
   padding: 5px 5px;
   width: 35rem;

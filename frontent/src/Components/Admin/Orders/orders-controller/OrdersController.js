@@ -5,6 +5,7 @@ const OrdersController = () => {
 
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
+    const orderTotal = orders.length;
     let total = 0;
     useEffect(() => {
         getOrders();
@@ -77,6 +78,7 @@ const OrdersController = () => {
             </div>
             {
                 loading ? <Loading/> :
+                orderTotal===0 ? <div style={{textAlign: 'center'}} className="cart-orderSomthing"><h1>No Orders Yet..</h1></div> :
                 <>
                     {
                         orders.map(order => {

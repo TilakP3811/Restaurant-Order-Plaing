@@ -14,7 +14,7 @@ const Routing = () => {
         <Routes>
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/:number" element={<Home/>}/>
-            <Route exact path="/:number/digital-menu/best-sellers" element={<BestSeller/>}/>
+            <Route path="/:number/digital-menu/best-sellers" element={<BestSeller/>}/>
             <Route path="/:number/digital-menu/food" element={<Food/>}/>
             <Route path="/:number/digital-menu/beverage" element={<Beverage/>}/>
             <Route path="/:number/digital-menu/dessert" element={<Dessert/>}/>
