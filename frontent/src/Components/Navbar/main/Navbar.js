@@ -15,7 +15,7 @@ const Navbar = () => {
 
     const logOut = () => {
         localStorage.clear();
-        navigate("/");
+        navigate("/1/");
     }
 
     const readLinks = () => {
@@ -27,8 +27,7 @@ const Navbar = () => {
                 <li key={4} className="nav-items"><Link to={ "/admin/digital-menu/food" } className="nav-link-sub">Food</Link></li>,
                 <li key={5} className="nav-items"><Link to={ "/admin/digital-menu/dessert" } className="nav-link-sub">Dessert</Link></li>,
                 <li key={6} className="nav-items"><Link to={ "/admin/digital-menu/beverage" } className="nav-link-sub">Beverage</Link></li>,
-                <li key={7} className="nav-items"><Link to={ "/admin/orders" } className="nav-link-head">Orders</Link></li>,
-                <li key={8} className="nav-items"><Link to={ "/admin/orders-history" } className="nav-link-head">Orders History</Link></li>
+                <li key={7} className="nav-items"><Link to={ "/admin/orders" } className="nav-link-head">Orders</Link></li>
             ]
         }
         else{
@@ -51,7 +50,6 @@ const Navbar = () => {
                     <p style={{ cursor: "pointer" }}><Link className="brand" to={ isAdmin ? "/admin" : table ? "/"+table.table : "/1"}>Monroe by Mars</Link></p>
                 </div>
                 <div className="search-cart">
-                    <i className="icons fas fa-search "></i>
                     {
                         isAdmin ? <i onClick={logOut} className="icons fas fa-sign-out-alt"></i> : <Link className='link' to={"/"+table.table+"/cart"}><i className="icons fas fa-cart-arrow-down"></i></Link>
                     }

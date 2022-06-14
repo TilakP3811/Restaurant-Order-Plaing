@@ -31,10 +31,6 @@ const placeOrder = async (req, res) => {
         if (!tableNum, !orderList) {
             return res.status(422).json({ err: true, message: "Something wrong order again" });
         }
-        const checkTable = await PlaceOrder.findOne({ tableNum: tableNum });
-        if (checkTable) {
-            return res.status(422).json({ err: true, message: "Table is accupied scan with other table" });
-        }
         const order = new PlaceOrder({
             tableNum: tableNum,
             date: date,
